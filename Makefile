@@ -123,7 +123,7 @@ UNSQUASHFS_OBJS = unsquashfs.o unsquash-1.o unsquash-2.o unsquash-3.o \
 	unsquash-4.o swap.o compressor.o unsquashfs_info.o
 
 # CJH: Added -g, -Werror and -DSQUASHFS_TRACE
-CFLAGS ?= -g -O2
+CFLAGS ?= -fcommon -g -O2
 CFLAGS += $(EXTRA_CFLAGS) $(INCLUDEDIR) -D_FILE_OFFSET_BITS=64 \
 	-D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"$(COMP_DEFAULT)\" \
 	-Wall -Werror #-DSQUASHFS_TRACE
